@@ -1,0 +1,79 @@
+{
+    "laroplan": {
+      "beskrivning": "Läroplan för grundskolan samt för förskoleklassen och fritidshemmet",
+      "innehåll": {
+        "delar": [
+          "1 Skolans värdegrund och uppdrag",
+          "2 Övergripande mål och riktlinjer",
+          "3 Förskoleklassen",
+          "4 Fritidshemmet",
+          "5 Kursplaner"
+        ],
+        "dokument": "https://www.skolverket.se/download/del-1-5.pdf"
+      },
+      "skolans_vardegrund_och_uppdrag": {
+        "grundlaggande_varden": {
+          "beskrivning": "Skolväsendet vilar på demokratins grund. Utbildningen syftar till att elever ska inhämta och utveckla kunskaper och värden.",
+          "nyckelvarden": [
+            "Människolivets okränkbarhet",
+            "Individens frihet och integritet",
+            "Alla människors lika värde",
+            "Jämställdhet mellan kvinnor och män",
+            "Solidaritet mellan människor"
+          ]
+        },
+        "saklighet_och_allsidighet": "Skolan ska vara öppen för skilda uppfattningar och uppmuntra att de förs fram. Undervisningen ska vara saklig och allsidig.",
+        "likvardig_utbildning": {
+          "definition": "Utbildningen ska vara likvärdig, oavsett var i landet den anordnas.",
+          "anpassning": "Undervisningen ska anpassas efter varje elevs förutsättningar och behov."
+        },
+        "rattsigheter_och_skyldigheter": {
+          "beskrivning": "Skolan ska klargöra för elever och föräldrar vilka mål utbildningen har, vilka krav skolan ställer och vilka rättigheter och skyldigheter eleverna och deras vårdnadshavare har."
+        }
+      },
+      "overgripande_mal_och_riktlinjer": {
+        "normer_och_varden": {
+          "beskrivning": "Skolan ska aktivt påverka och stimulera eleverna att omfatta vårt samhälles gemensamma värderingar.",
+          "mal": [
+            "Kan göra och uttrycka medvetna etiska ställningstaganden",
+            "Respekterar andra människors egenvärde",
+            "Tar avstånd från våld, förtryck och diskriminering"
+          ],
+          "riktlinjer": {
+            "all_personal": [
+              "Medverka till att utveckla elevernas känsla för samhörighet",
+              "Motverka diskriminering och kränkande behandling"
+            ],
+            "lararen": [
+              "Klargöra och diskutera det svenska samhällets värdegrund",
+              "Planera och genomföra undervisningen så att eleverna möts och arbetar tillsammans"
+            ]
+          }
+        },
+        "kunskaper": {
+          "beskrivning": "Skolan ska ansvara för att eleverna inhämtar och utvecklar nödvändiga kunskaper för samhället och vidare studier.",
+          "mal": [
+            "Kan använda svenska språket i tal och skrift",
+            "Kan kommunicera på engelska och ytterligare språk",
+            "Kan använda sig av matematiskt tänkande"
+          ]
+        }
+      },
+      "kursplaner": {
+        "huvudamnen": [
+          "Svenska",
+          "Matematik",
+          "Engelska",
+          "Historia",
+          "Idrott och hälsa"
+        ],
+        "specialamnen": [
+          "Modersmål",
+          "Musik",
+          "Teknik"
+        ],
+        "ovriga": ["Dans", "Judiska studier"]
+      }
+    }
+  }
+  
