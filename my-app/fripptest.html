@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedagogisk Planering</title>
+  <link rel="stylesheet" href="./src/style/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <h1>Pedagogisk Planering</h1>
+    <div id="menu">
+      <button class="menu-button" data-target="fritids">Fritids</button>
+      <button class="menu-button" data-target="forskola">Förskola</button>
+      <button class="menu-button" data-target="bibliotek">Bibliotek</button>
+    </div>
+
+    <form id="fripp-form" class="hidden">
+      <fieldset class="category" id="rubrik">
+        <legend>Rubrik på den pedagogiska planeringen</legend>
+        <input type="text" id="plan-title" placeholder="t.ex Fripp - Rymden" />
+      </fieldset>
+
+      <fieldset class="category" id="kartlaggning">
+        <legend>Nulägesbeskrivning / kartläggning</legend>
+        <textarea id="interests" placeholder="Vilka av elevernas intressen, initiativ och behov kan integreras i området? Vilka förmågor ska eleverna utveckla?" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="category" id="mål">
+        <legend>Mål</legend>
+        <textarea id="goal-description" placeholder="Vad ska eleven lära sig, förmå och förstå efteråt? Varför ska eleverna lära sig detta? Vem är Mottagare? Skriv Kopplingar till styrdokument." rows="4"></textarea>
+        <div id="goal-dropdowns">
+          <div class="dropdown-container">
+            <label for="central-content">Centralt innehåll:</label>
+            <select class="central-content">
+              <option value="">Välj centralt innehåll</option>
+            </select>
+            <label for="sub-content">Läroplans mål:</label>
+            <select class="sub-content">
+              <option value="">Välj läroplans mål</option>
+            </select>
+            <button type="button" class="remove-dropdown"><img src="trash-icon.png" alt="Ta bort"></button>
+          </div>
+        </div>
+        <button type="button" id="add-dropdown">Lägg till fler mål</button>
+      </fieldset>
+
+      <fieldset class="category" id="hur">
+        <legend>Hur gör vi?</legend>
+        <textarea id="how" placeholder="Beskriv hur ni ska gå tillväga." rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="category" id="aktiviteter">
+        <legend>Aktiviteter</legend>
+        <textarea id="activities" placeholder="Beskriv planerade aktiviteter." rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="category" id="metoder">
+        <legend>Metoder</legend>
+        <textarea id="methods" placeholder="Beskriv vilka metoder ni ska använda." rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="category" id="larandemiljo">
+        <legend>Lärandemiljö</legend>
+        <textarea id="environment" placeholder="Plats, material och tekniker." rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="category" id="forhallningssatt">
+        <legend>Personalens förhållningssätt</legend>
+        <select id="approach">
+          <option value="klassiskt">Klassiskt didaktiskt</option>
+          <option value="processorienterad">Processorienterad</option>
+          <option value="kaotiskt">Kaotiskt/kreativt</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="category" id="uppfoljning">
+        <legend>Uppföljning</legend>
+        <textarea id="follow-up" placeholder="När?" rows="4"></textarea>
+      </fieldset>
+
+      <fieldset class="category" id="utvardering">
+        <legend>Utvärdering</legend>
+        <textarea id="evaluation" placeholder="Hur blev det? Hur vet vi att vi bidragit till elevernas lärande? Hur ska utvärderingarna göras med eleverna?" rows="4"></textarea>
+      </fieldset>
+
+      <button type="button" id="save-plan">Spara</button>
+      <button type="button" id="generate-pdf">Skapa PDF</button>
+    </form>
+
+    <div id="biblioteket" class="hidden">
+      <h2>Mina sparade pedagogiska planeringar</h2>
+      <h3>Fritids</h3>
+      <ul id="saved-plans-fritids"></ul>
+      <h3>Förskola</h3>
+      <ul id="saved-plans-forskola"></ul>
+      <button type="button" id="back-to-menu">Tillbaka till menyn</button>
+    </div>
+
+    <div id="plan-display" class="hidden">
+      <h2>Visar sparad plan</h2>
+      <div id="display-content"></div>
+      <button type="button" id="back-to-bibliotek">Tillbaka till biblioteket</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script src="./src/js/scrips.js"></script>
+</body>
+</html>
