@@ -1,38 +1,47 @@
 body {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200vh;
-  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0;
     font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 20px;
+    margin: 0; 
     background-color: #f4f4f4;
     color: #000000; /* Set default text color to black */
   }
-  h1 {
+  .container, h1 {
     text-align: center;
+    
     margin-bottom: 20px;
     color: #000000;
   }
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-  }
-  u1 {
+
+  .container ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
+    padding-bottom:2rem;
+    text-align: left;
   }
+ .container li {
+  padding:5%;
+  border-bottom:1px solid #ccc;
+  
+ }
   .container {
-    position:absolute;
+   
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    height: 200vh;
+    height: 100%;
+    margin-top:5rem;
+    margin-bottom:5rem;
+    padding:2%;
     flex-direction: column;
   }
   #app {
@@ -42,100 +51,144 @@ body {
     background: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
-  
+  #menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
 .menu-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 150px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
+  
   margin: 10px;
-  padding: 10px;
-  background-color: #007BFF; /* Button background color */
-  color: white; /* Button text color */
-  border: none;
-  border-radius: 5px;
+  background-color: #04305f; /* Button background color */
   cursor: pointer;
   text-align: center;
+  padding: 13px;
+  margin-bottom:0.5rem;  
+  color: white;
+  border: none;
+  border-radius: 16px;
 }
-
-.menu-button img {
-  width: 24px; /* Adjust the icon size as needed */
-  height: 24px; /* Adjust the icon size as needed */
-  margin-bottom: 5px;
-}
-
 .menu-button:hover {
-  background-color: #0056b3; /* Button hover color */
+  background-color: #021a34a7;  /* Button hover color */
 }
-  .container legend {
-    text-align: left;
-    color: #000000;
-    font-size: 15px;
-  }
+.containerForButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:10%;
+  border-bottom: 1px solid #ccc;
+}
+
+.description {
+  align-items: center;
+  text-align:center;
+}
+.description h2 {
+  margin-bottom: 2.3rem;
+  width: 95vw;
   
-  fieldset {
+}
+
+.container-fripp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    position: absolute;
+    top:0;
+   
+    
+    padding-top:10%;
+
+  }
+
+  .category {
     margin-bottom: 20px;
-    padding: 15px;
+  
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    
   }
-  
-  legend {
-    font-weight: bold;
+  .category label {
+    padding-top:15%;
   }
-  
+
+  .category h4 {
+    text-align: center;
+  }
+
+
   textarea, select, input[type="text"] {
     width: 96%;
-    padding: 10px;
-    margin-top: 10px;
+   padding:15px 10px;
+   margin:6px 0;
+    
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  
-  button {
-    display: block;
+
+  .down-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+  }
+  .down-buttons button{
+    width: 60%;
+    align-items: center;
+    justify-content: space-around;  
+    background-color: #04305f; 
+    padding: 13px;
+    margin-bottom:0.5rem;    
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 16px;
     cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+  #save-as-pdf {
+   background-color: rgba(128, 25, 25, 0.878);
+  }
+  .down-buttons button:hover {
+    background-color: #0c38665c; ;
   }
   
-  #menu {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  
-  .menu-button {
-    width: 30%;
-    font-size: 1.2em;
-    padding: 20px;
-  }
-  
+
+
   .hidden {
     display: none;
   }
   
+
+  
+  #goal-dropdowns {
+    display: flex;
+  padding-top: 0.3rem;;
+    justify-content: center;
+  }
+
   #kartlaggning {
     background-color: #e0f7fa;
   }
   
   #mål {
+
     background-color: #ffecb3;
   }
+
   
   #hur {
     background-color: #ffe0b2;
@@ -169,24 +222,52 @@ body {
     margin-bottom: 20px;
     position: relative;
   }
+
   
   .remove-dropdown {
     display: block;
     margin: 10px auto 0;
-    background-color: transparent;
+    background-color: rgba(128, 25, 25, 0.878);
     border: none;
     cursor: pointer;
   }
   
-  .remove-dropdown img {
-    width: 24px;
-    height: 24px;
+.biblioteket-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 16px;
+    position: absolute;
+    height: 50vh;
+    background-color: #c7c7c730;
+    top:20%;
+    padding-top:10%;
   }
   
-  #biblioteket h2 {
+  .biblioteket {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+
+  }
+  .biblioteket h4 {
     text-align: center;
+    padding-top:5%;
   }
-  
+  .biblioteket button {
+    align-items: center;
+    justify-content: space-around;
+    background-color: #04305f;
+    padding: 13px;
+    margin-bottom:0.5rem;
+    
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+  }
   #saved-plans-fritids {
     list-style-type: none;
     padding: 0;

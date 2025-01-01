@@ -31,12 +31,15 @@ function PlanForm() {
   };
 
   return (
-    <div id="container">
-      <h1>Pedagogisk Planering</h1>
+    <div class="container">
+     
 
       {/* Menyn */}
       {currentView === "menu" && (
         <div id="menu">
+           <h1>Pedagogisk Planering</h1>
+          <div className="containerForButtons">
+            
           <button
             className="menu-button"
             onClick={() => handleButtonClick("fritids")}
@@ -49,8 +52,10 @@ function PlanForm() {
           >
             Bibliotek
           </button>
+          </div>
           <div className="description">
             <h2>Vad är en pedagogisk planering i fritidshemmet?</h2>
+            
             <p>
               En pedagogisk planering i fritidshemmet är ett verktyg som hjälper pedagoger att skapa en genomtänkt och strukturerad verksamhet. Den används för att planera aktiviteter och undervisning som är meningsfulla, roliga och utvecklande för eleverna. Planeringen utgår från läroplanens mål för fritidshemmet och anpassas efter barnens intressen, behov och förutsättningar.
             </p>
@@ -58,9 +63,9 @@ function PlanForm() {
               I fritidshemmet handlar pedagogisk planering om att skapa en balans mellan lek, lärande, vila och aktivitet. Den hjälper oss att säkerställa att verksamheten både är trygg och stimulerande, samtidigt som vi stödjer barnens sociala, språkliga och kreativa utveckling.
             </p>
             <h2>Vad innehåller en pedagogisk planering i fritidshemmet?</h2>
-            <p>
+            <p><strong>
               En pedagogisk planering kan se lite olika ut beroende på aktivitetens syfte, men brukar innehålla följande delar:
-            </p>
+              </strong></p>
             <ul>
               <li><strong>Syfte:</strong> Varför gör vi detta? Här beskriver vi målet med aktiviteten, till exempel att utveckla samarbete, kreativitet eller rörelseglädje.</li>
               <li><strong>Mål:</strong> Vad vill vi att eleverna ska utveckla eller lära sig? Målen kan kopplas till fritidshemmets läroplan, till exempel att stärka sociala förmågor eller använda estetiska uttryck.</li>
@@ -82,15 +87,16 @@ function PlanForm() {
 
       {/* Fritids Form */}
       {currentView === "fritids" && (
-        <div className="container">
+        <div className="container-fripp">
           <form id="fripp-form">
+            <h3>Planering</h3>
             <fieldset className="category" id="rubrik">
-              <legend>Rubrik på den pedagogiska planeringen</legend>
+              <h4>Rubrik på den pedagogiska planeringen</h4>
               <input type="text" id="plan-title" placeholder="t.ex Fripp - Rymden" />
             </fieldset>
 
             <fieldset className="category" id="kartlaggning">
-              <legend>Nulägesbeskrivning / kartläggning</legend>
+              <h4>Nulägesbeskrivning / kartläggning</h4>
               <textarea
                 id="interests"
                 placeholder="Vilka av elevernas intressen, initiativ och behov kan integreras i området? Vilka förmågor ska eleverna utveckla?"
@@ -99,24 +105,29 @@ function PlanForm() {
             </fieldset>
 
             <fieldset className="category" id="mål">
-              <h1>Mål</h1>
+              <h4>Mål</h4>
               <textarea
                 id="goal-description"
                 placeholder="Vad ska eleven lära sig, förmå och förstå efteråt? Varför ska eleverna lära sig detta? Vem är Mottagare? Skriv Kopplingar till styrdokument."
                 rows="4"
               ></textarea>
+
               <div id="goal-dropdowns">
+                
                 <div className="dropdown-container">
-                  <label htmlFor="central-content">Centralt innehåll:</label>
-                  <select className="central-content">
+                 
+                  <label htmlFor="central-content" >Centralt innehåll:</label>
+                  <select id="">
                     <option value="">Välj centralt innehåll</option>
                   </select>
+                  
                   <label htmlFor="sub-content">Läroplans mål:</label>
-                  <select className="sub-content">
+                  <select>
                     <option value="">Välj läroplans mål</option>
                   </select>
+                  
                   <button type="button" className="remove-dropdown">
-                    <img src="trash-icon.png" alt="Ta bort" />
+                   Ta bort mål
                   </button>
                 </div>
               </div>
@@ -124,28 +135,29 @@ function PlanForm() {
                 Lägg till fler mål
               </button>
             </fieldset>
+            
             <fieldset className="category" id="hur">
-              <legend>Hur gör vi?</legend>
+              <h4>Hur gör vi?</h4>
               <textarea id="how" placeholder="Beskriv hur ni ska gå tillväga." rows="4"></textarea>
             </fieldset>
 
             <fieldset className="category" id="aktiviteter">
-              <legend>Aktiviteter</legend>
+              <h4>Aktiviteter</h4>
               <textarea id="activities" placeholder="Beskriv planerade aktiviteter." rows="4"></textarea>
             </fieldset>
 
             <fieldset className="category" id="metoder">
-              <legend>Metoder</legend>
+              <h4>Metoder</h4>
               <textarea id="methods" placeholder="Beskriv vilka metoder ni ska använda." rows="4"></textarea>
             </fieldset>
 
             <fieldset className="category" id="larandemiljo">
-              <legend>Lärandemiljö</legend>
+              <h4>Lärandemiljö</h4>
               <textarea id="environment" placeholder="Plats, material och tekniker." rows="4"></textarea>
             </fieldset>
 
             <fieldset className="category" id="forhallningssatt">
-              <legend>Personalens förhållningssätt</legend>
+              <h4>Personalens förhållningssätt</h4>
               <select id="approach">
                 <option value="klassiskt">Klassiskt didaktiskt</option>
                 <option value="processorienterad">Processorienterad</option>
@@ -154,22 +166,23 @@ function PlanForm() {
             </fieldset>
 
             <fieldset className="category" id="uppfoljning">
-              <legend>Uppföljning</legend>
+              <h4>Uppföljning</h4>
               <textarea id="follow-up" placeholder="När?" rows="4"></textarea>
             </fieldset>
 
             <fieldset className="category" id="utvardering">
-              <legend>Utvärdering</legend>
+              <h4>Utvärdering</h4>
               <textarea id="evaluation" placeholder="Hur blev det? Hur vet vi att vi bidragit till elevernas lärande? Hur ska utvärderingarna göras med eleverna?" rows="4"></textarea>
             </fieldset>
-
+           <div className="down-buttons">
             <button type="button" id="save-plan">
               Spara
             </button>
-            <button type="button" onClick={handleGeneratePDF}>
+            <button type="button" id="save-as-pdf" onClick={handleGeneratePDF}>
               Skapa PDF
             </button>
             <button onClick={() => handleButtonClick("menu")}>Tillbaka till menyn</button>
+            </div>
           </form>
           
         </div>
@@ -177,8 +190,9 @@ function PlanForm() {
 
       {/* Bibliotek */}
       {currentView === "bibliotek" && (
-        <div id="biblioteket">
-          <h2>Mina sparade pedagogiska planeringar</h2>
+        <div className="biblioteket-container">
+        <div className="biblioteket">
+          <h4>Mina sparade pedagogiska planeringar</h4>
           <h3>Fritids</h3>
           <ul id="saved-plans-fritids">
             <li>Exempel på sparad plan för Fritids</li>
@@ -187,6 +201,8 @@ function PlanForm() {
             Tillbaka till menyn
           </button>
         </div>
+        </div>
+        
       )}
     </div>
   );
