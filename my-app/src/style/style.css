@@ -1,4 +1,5 @@
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,13 +11,24 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
+    color: #000000; /* Set default text color to black */
   }
   h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #000000;
   }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  u1 {
+    list-style-type: none;
+    padding: 0;
+  }
   .container {
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +43,32 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  margin: 10px;
+  padding: 10px;
+  background-color: #007BFF; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.menu-button img {
+  width: 24px; /* Adjust the icon size as needed */
+  height: 24px; /* Adjust the icon size as needed */
+  margin-bottom: 5px;
+}
+
+.menu-button:hover {
+  background-color: #0056b3; /* Button hover color */
+}
   .container legend {
     text-align: left;
     color: #000000;
@@ -149,12 +187,12 @@ body {
     text-align: center;
   }
   
-  #saved-plans-fritids, #saved-plans-forskola {
+  #saved-plans-fritids {
     list-style-type: none;
     padding: 0;
   }
   
-  #saved-plans-fritids li, #saved-plans-forskola li {
+  #saved-plans-fritids li {
     margin: 10px 0;
     padding: 10px;
     background-color: #f4f4f4;

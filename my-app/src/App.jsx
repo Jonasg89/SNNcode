@@ -49,6 +49,34 @@ function PlanForm() {
           >
             Bibliotek
           </button>
+          <div className="description">
+            <h2>Vad är en pedagogisk planering i fritidshemmet?</h2>
+            <p>
+              En pedagogisk planering i fritidshemmet är ett verktyg som hjälper pedagoger att skapa en genomtänkt och strukturerad verksamhet. Den används för att planera aktiviteter och undervisning som är meningsfulla, roliga och utvecklande för eleverna. Planeringen utgår från läroplanens mål för fritidshemmet och anpassas efter barnens intressen, behov och förutsättningar.
+            </p>
+            <p>
+              I fritidshemmet handlar pedagogisk planering om att skapa en balans mellan lek, lärande, vila och aktivitet. Den hjälper oss att säkerställa att verksamheten både är trygg och stimulerande, samtidigt som vi stödjer barnens sociala, språkliga och kreativa utveckling.
+            </p>
+            <h2>Vad innehåller en pedagogisk planering i fritidshemmet?</h2>
+            <p>
+              En pedagogisk planering kan se lite olika ut beroende på aktivitetens syfte, men brukar innehålla följande delar:
+            </p>
+            <ul>
+              <li><strong>Syfte:</strong> Varför gör vi detta? Här beskriver vi målet med aktiviteten, till exempel att utveckla samarbete, kreativitet eller rörelseglädje.</li>
+              <li><strong>Mål:</strong> Vad vill vi att eleverna ska utveckla eller lära sig? Målen kan kopplas till fritidshemmets läroplan, till exempel att stärka sociala förmågor eller använda estetiska uttryck.</li>
+              <li><strong>Aktiviteter och metoder:</strong> Hur ska vi göra? Här beskriver vi vilka aktiviteter som ska genomföras och vilka metoder som ska användas, till exempel lekar, skapande, diskussioner eller uteaktiviteter.</li>
+              <li><strong>Anpassningar:</strong> Hur säkerställer vi att alla kan delta? Här tänker vi på hur vi kan anpassa aktiviteterna så att de passar barn med olika behov och förmågor.</li>
+              <li><strong>Tid och plats:</strong> När och var ska aktiviteten genomföras? Det kan vara under en specifik tidpunkt, en viss dag i veckan eller i en specifik miljö, till exempel ute på gården eller i ett skapande rum.</li>
+              <li><strong>Utvärdering och reflektion:</strong> Hur gick det? Efter aktiviteten reflekterar vi över resultatet tillsammans med barnen och kollegorna. Vad fungerade bra? Vad kan vi göra annorlunda nästa gång?</li>
+            </ul>
+            <h2>Varför är pedagogisk planering viktigt i fritidshemmet?</h2>
+            <p>
+              I fritidshemmet är flexibilitet och barns inflytande centrala, men en bra planering ger oss en tydlig riktning att arbeta mot. Den säkerställer att aktiviteterna är kopplade till läroplanens mål och att vi skapar en meningsfull verksamhet som stödjer barnens utveckling. Samtidigt blir det lättare att samarbeta i arbetslaget och att utvärdera vårt arbete.
+            </p>
+            <p>
+              Med en genomtänkt pedagogisk planering kan vi skapa en miljö där barnen får leka, lära och växa – på sina villkor, men med vår vägledning. Det hjälper oss att förena struktur med kreativitet och se till att alla barn får en rolig och utvecklande tid på fritids!
+            </p>
+          </div>
         </div>
       )}
 
@@ -71,7 +99,7 @@ function PlanForm() {
             </fieldset>
 
             <fieldset className="category" id="mål">
-              <legend>Mål</legend>
+              <h1>Mål</h1>
               <textarea
                 id="goal-description"
                 placeholder="Vad ska eleven lära sig, förmå och förstå efteråt? Varför ska eleverna lära sig detta? Vem är Mottagare? Skriv Kopplingar till styrdokument."
